@@ -18,4 +18,4 @@ const Route = use("Route");
 
 // Route.on('/').render('welcome')
 
-Route.get("/:page?", "ArticleController.getAllArticles");
+Route.get("/:page?", "ArticleController.getAllArticles").as("articles");
