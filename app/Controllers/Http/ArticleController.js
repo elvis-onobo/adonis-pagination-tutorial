@@ -9,7 +9,7 @@ class ArticleController {
 
       const articles = await Article.query()
         .orderBy("id", "desc")
-        .paginate(pageNumber, 10);
+        .paginate(pageNumber, 8);
 
       return view.render("welcome", {
         articles: articles.toJSON(),
