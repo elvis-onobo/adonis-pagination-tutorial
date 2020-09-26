@@ -3,7 +3,7 @@
 const Article = use("App/Models/Article");
 
 class ArticleController {
-  async getAllArticles({ params: { page }, response, view }) {
+  async getAllArticles({ session, params: { page }, response, view }) {
     try {
       const pageNumber = page || 1;
 
@@ -15,7 +15,7 @@ class ArticleController {
         articles: articles.toJSON(),
       });
     } catch (error) {
-      console.log(error);
+      console.log("There has been an error loading the page ====>", error);
 
       session.flash({
         notification: {
