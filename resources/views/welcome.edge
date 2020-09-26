@@ -27,7 +27,7 @@
       <a href="{{ articles.lastPage == articles.page ? '#' : route('articles', { page: articles.page + 1}) }}" class="btn btn-primary">Next</a>
     </div>
 
-    {{ paginate(articles) }}
+    {{ paginate(articles, 'articles') }}
   </div>
 
 </body>
